@@ -142,8 +142,18 @@ fun TopBarReview() {
     TopBar()
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun FirstPostReview() {
     FirstPost()
+}
+
+@Preview(showBackground = true)
+@Composable
+fun FullApplication() {
+    Column {
+        TopBar()
+        FirstPost()
+        SecondPost()
+    }
 }
