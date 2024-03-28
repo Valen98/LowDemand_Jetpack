@@ -27,12 +27,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lowdemand_jetpack.ui.theme.LowDemand_JetpackTheme
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.layout.ContentScale
 
 
 class MainActivity : ComponentActivity() {
@@ -100,13 +104,17 @@ fun TopBar() {
 fun FirstPost() {
     val image = painterResource(R.drawable.photo1)
 
-    Column(modifier = Modifier
+    Column(
+        modifier = Modifier
         .fillMaxWidth()
-        .padding(top = 16.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)) {
+        .padding(16.dp)
+    ) {
         Image(
             painter = image,
             contentDescription = "First Image",
+            contentScale = ContentScale.FillBounds,
             modifier = Modifier.padding(bottom = 8.dp)
+                .aspectRatio(1052f / 714f)
         )
 
         Text(text = "My Bedroom")
@@ -120,13 +128,17 @@ fun FirstPost() {
 fun SecondPost() {
     val image = painterResource(R.drawable.photo2)
 
-    Column(modifier = Modifier
+    Column(
+        modifier = Modifier
         .fillMaxWidth()
-        .padding(top = 16.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)) {
+        .padding(16.dp)
+    ) {
         Image(
             painter = image,
             contentDescription = "First Image",
+            contentScale = ContentScale.FillBounds,
             modifier = Modifier.padding(bottom = 8.dp)
+                .aspectRatio(1052f / 714f)
         )
 
         Text(text = "My Garden")
